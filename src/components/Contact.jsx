@@ -14,62 +14,80 @@ export default function Contact() {
     triggerOnce: true,
   });
 
+  //LOADING STATE
+  const [loading, setLoading] = useState(false);
+
+  //FORM STATE
   const [formData, setFormData] = useState({
     user_name: "",
     user_email: "",
     message: "",
   });
 
+  const isFormValid =
+    formData.user_name.trim() !== "" &&
+    formData.user_email !== "" &&
+    formData.message !== "";
+
   const form = useRef();
 
-  const sendEmail = (e) => {
+  //SEND EMAIL FUNCTION
+  const sendEmail = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
-    emailjs
-      .sendForm(
+    // Wrap setTimeout in a Promise
+    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+    try {
+      // Simulate an asynchronous operation
+      await delay(2000);
+
+      const result = await emailjs.sendForm(
         "service_0xap5i6",
         "template_cvdcrd4",
         form.current,
         "93GX9nNMQffy-jJlG"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          console.log("message sent");
-          toast.success("Email submitted succesfully!", {
-            position: "bottom-right",
-            autoClose: 3000,
-            hideProgressBar: true,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-            transition: Bounce,
-          });
-
-          setFormData({
-            user_name: "",
-            user_email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          console.log(error.text);
-          console.log("error");
-          toast.error("Something went wrong!", {
-            position: "bottom-right",
-            autoClose: 3000,
-            hideProgressBar: true,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-            transition: Bounce,
-          });
-        }
       );
+
+      console.log(result.text);
+      console.log("message sent");
+
+      toast.success("Email submitted successfully!", {
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+      });
+
+      setFormData({
+        user_name: "",
+        user_email: "",
+        message: "",
+      });
+    } catch (error) {
+      console.log(error.text);
+      console.log("error");
+
+      toast.error("Something went wrong!", {
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleInputChange = (e) => {
@@ -79,6 +97,13 @@ export default function Contact() {
       [e.target.name]: e.target.value,
     });
   };
+
+  function send() {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }
 
   return (
     <motion.div
@@ -179,12 +204,7 @@ export default function Contact() {
           </div>
         </div>
         <div className="box2 basis-[50%]">
-          <form
-            action=""
-            className="flex flex-col"
-            onSubmit={sendEmail}
-            ref={form}
-          >
+          <form action="" className="flex flex-col" ref={form}>
             <label htmlFor="" className="w-full">
               Name
             </label>
@@ -216,17 +236,34 @@ export default function Contact() {
               value={formData.message}
               onChange={handleInputChange}
             ></textarea>
-            <motion.input
-              whileHover={{
-                scale: 1.05,
-              }}
-              whileTap={{
-                scale: 0.9,
-              }}
-              type="submit"
-              value="send"
-              className="border-2 mt-2 h-[40px] border-black bg-gray-300 rounded cursor-pointer"
-            />
+            <motion.button
+              onClick={isFormValid && loading === false ? sendEmail : undefined}
+              className={` flex w-full justify-center items-center border-2 mt-2 h-[40px] border-black bg-gray-300 rounded ${
+                isFormValid && loading === false
+                  ? "cursor-pointer"
+                  : "cursor-not-allowed"
+              } `}
+              whileHover={
+                isFormValid && loading === false
+                  ? {
+                      scale: 1.05,
+                    }
+                  : {}
+              }
+              whileTap={
+                isFormValid && {
+                  scale: 0.9,
+                }
+              }
+              disabled={!isFormValid}
+            >
+              <div
+                className={`h-[20px] w-[20px] border-2 border-black mr-2 border-dashed ${
+                  loading === true ? "animate-spin inline-block" : "hidden"
+                }`}
+              />
+              {loading === true ? "Sending" : "Send"}
+            </motion.button>
           </form>
         </div>
       </div>

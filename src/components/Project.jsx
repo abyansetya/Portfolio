@@ -29,7 +29,7 @@ export default function Project() {
     <div ref={ref}>
       <motion.div
         ref={carousel}
-        className="overflow-hidden"
+        className="overflow-hidden "
         variants={{
           hidden: { opacity: 0, y: 75, scale: 0.5 },
           visible: { opacity: 1, y: 0, scale: 1 },
@@ -48,14 +48,14 @@ export default function Project() {
           whileTap={{
             cursor: "grabbing",
           }}
-          className=" carousel font-poppins px-6 flex cursor-grab "
+          className=" carousel font-poppins px-6 flex cursor-grab snap-x"
           drag="x"
           dragConstraints={{
             right: 0,
             left: -width,
           }}
         >
-          <div className="innercarousel flex">
+          <div className="innercarousel flex snap-x">
             <div className="pointer-events-none item">
               <img src={frame1} alt="" className="sm:w-[500px] w-[350px] " />
               <div className="sm:w-[500px] w-[350px]">
