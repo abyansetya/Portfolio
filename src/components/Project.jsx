@@ -2,9 +2,12 @@ import React, { useEffect, useRef, useState } from "react";
 import frame1 from "../assets/Frame 1.svg";
 import frame2 from "../assets/Frame 2.svg";
 import frame3 from "../assets/Frame 3.svg";
+import netfreak from "../assets/netfreak.svg";
+import pdfwiz from "../assets/pdfwiz.svg";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { FiGithub } from "react-icons/fi";
 import { LuExternalLink } from "react-icons/lu";
+import { Link } from "react-router-dom";
 
 export default function Project() {
   const ref = useRef(null);
@@ -56,6 +59,77 @@ export default function Project() {
           }}
         >
           <div className="innercarousel flex snap-x">
+            <div className="pointer-events-none item">
+              <img src={netfreak} alt="" className="sm:w-[500px] w-[350px] " />
+              <div className="sm:w-[500px] w-[350px]">
+                <h1 className="justify-center flex font-bold">
+                  NETFREAK - netflix clone
+                </h1>
+                <p className="mx-5 text-justify mt-2 sm:text-[16px] text-[15px]">
+                  The web that i created for cloning netflix website but using
+                  TMBD API. web content is mostly fetched from tmdb api ex.
+                  movie title, image, actress/actor,etc. this web also include
+                  search tab that can search a movie.
+                </p>
+                <div className="flex justify-center gap-4 mt-5 cursor-pointer">
+                  <motion.div
+                    whileHover={{
+                      y: -10,
+                    }}
+                    className=" flex justify-center items-center  w-[50px] h-[50px] bg-gray-300 border rounded-full pointer-events-auto "
+                  >
+                    <a href="https://github.com/abyansetya/NETFREAK">
+                      <FiGithub size={23} />
+                    </a>
+                  </motion.div>
+
+                  <motion.div
+                    whileHover={{
+                      y: -10,
+                    }}
+                    className=" flex justify-center items-center  w-[50px] h-[50px] bg-gray-300 border rounded-full pointer-events-auto "
+                  >
+                    <LuExternalLink size={23} />
+                  </motion.div>
+                </div>
+              </div>
+            </div>
+
+            <div className="pointer-events-none item">
+              <img src={pdfwiz} alt="" className="sm:w-[500px] w-[350px] " />
+              <div className="sm:w-[500px] w-[350px]">
+                <h1 className="justify-center flex font-bold">
+                  PDF Wizard - ilovepdf clone
+                </h1>
+                <p className="mx-5 text-justify mt-2 sm:text-[16px] text-[15px]">
+                  The web that i created for cloning ilovepdf with interactive
+                  user interfaces and dragged upload file. this web stack is
+                  based on react js and tailwind css.
+                </p>
+                <div className="flex justify-center gap-4 mt-5 cursor-pointer">
+                  <motion.div
+                    whileHover={{
+                      y: -10,
+                    }}
+                    className=" flex justify-center items-center  w-[50px] h-[50px] bg-gray-300 border rounded-full pointer-events-auto "
+                  >
+                    <a href="https://github.com/abyansetya/PDF-WIZARD">
+                      <FiGithub size={23} />
+                    </a>
+                  </motion.div>
+
+                  <motion.div
+                    whileHover={{
+                      y: -10,
+                    }}
+                    className=" flex justify-center items-center  w-[50px] h-[50px] bg-gray-300 border rounded-full pointer-events-auto "
+                  >
+                    <LuExternalLink size={23} />
+                  </motion.div>
+                </div>
+              </div>
+            </div>
+
             <div className="pointer-events-none item">
               <img src={frame1} alt="" className="sm:w-[500px] w-[350px] " />
               <div className="sm:w-[500px] w-[350px]">

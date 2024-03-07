@@ -89,12 +89,12 @@ export default function Experience() {
                 <p className={`${styles1.paragraph}`}>Intermediate</p>
               </div>
               <div className="sm:basis-4/12 b flex flex-col items-center p-5">
-                <p className={`${styles1.header}`}>Canva</p>
-                <p className={`${styles1.paragraph}`}>Intermediate</p>
+                <p className={`${styles1.header}`}>Express JS</p>
+                <p className={`${styles1.paragraph}`}>Beginner</p>
               </div>
               <div className="sm:basis-4/12   flex flex-col items-center p-5">
                 <p className={`${styles1.header}`}>python</p>
-                <p className={`${styles1.paragraph}`}>Intermediate</p>
+                <p className={`${styles1.paragraph}`}>Beginner</p>
               </div>
               <div className="sm: flex flex-col items-center p-5">
                 <p className={`${styles1.header}`}>React JS</p>
@@ -103,6 +103,18 @@ export default function Experience() {
               <div className="sm:basis-4/12   flex flex-col items-center p-5">
                 <p className={`${styles1.header}`}>Tailwind CSS</p>
                 <p className={`${styles1.paragraph}`}>Intermediate</p>
+              </div>
+              <div className="sm:basis-4/12   flex flex-col items-center p-5">
+                <p className={`${styles1.header}`}>Java</p>
+                <p className={`${styles1.paragraph}`}>Basic</p>
+              </div>
+              <div className="sm:basis-4/12   flex flex-col items-center p-5">
+                <p className={`${styles1.header}`}>PostgreSQL</p>
+                <p className={`${styles1.paragraph}`}>Beginner</p>
+              </div>
+              <div className="sm:basis-4/12   flex flex-col items-center p-5">
+                <p className={`${styles1.header}`}>Node JS</p>
+                <p className={`${styles1.paragraph}`}>Beginner</p>
               </div>
             </div>
           </div>
