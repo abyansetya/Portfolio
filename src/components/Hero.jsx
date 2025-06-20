@@ -1,6 +1,6 @@
 import React from "react";
 import profilepict from "../assets/profilepict.svg";
-import cv from "../assets/CV_Abyan.pdf";
+import cv from "../assets/CV_AbyanSetyaneva_Updated.pdf";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 
