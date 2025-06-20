@@ -10,14 +10,14 @@ export default function Hero() {
   }
 
   const [text] = useTypewriter({
-    words: ["rontend Developer"],
+    words: ["ull Stack Developer"],
     loop: {},
     typeSpeed: 120,
     deleteSpeed: 50,
   });
 
   return (
-    <div className="flex justify-center sm:gap-[5rem] gap-[1rem] py-16  px-16 w-full md:flex-row flex-col z-1">
+    <div className="flex justify-center sm:gap-[5rem] gap-[1rem] py-20 h-[100vh] px-16 w-full md:flex-row flex-col z-1">
       <motion.img
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -28,7 +28,7 @@ export default function Hero() {
         }}
         src={profilepict}
         alt=""
-        className="flex h-[300px] w-[300px] sm:h-[400px] sm:w-[400px]  my-auto self-center  "
+        className="flex h-[300px] w-[300px] sm:h-[400px] sm:w-[400px]  self-center  "
         draggable="false"
       />
       <div className="self-center text-center font-poppins">

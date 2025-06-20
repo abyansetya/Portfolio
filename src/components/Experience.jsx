@@ -55,12 +55,12 @@ export default function Experience() {
         stiffness: 50,
       }}
       triggerAnime={triggerAnime}
-      className="container pt-12 font-poppins"
+      className=" pt-12 font-poppins flex flex-col justify-center"
     >
       <div className="title flex justify-end">
         <h1 className="font-poppins font-bold text-[32px]">Experiences</h1>
       </div>
-      <div className="innercontainer flex gap-2 mt-2 md:flex-row flex-col">
+      <div className="w-full  flex gap-2 mt-2 md:flex-row flex-col">
         <div className="box1 md:w-[60%] w-[100%] rounded-md border-2 border-black">
           <div className="title flex justify-center  flex-col items-center mt-2">
             <h1 className="font-bold">Other Skills</h1>

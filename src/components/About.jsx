@@ -56,7 +56,7 @@ export default function About() {
     setTriggerAnime(true);
   }
   return (
-    <div className="flex items-center  justfity-between  md:flex-row flex-col">
+    <div className="flex items-center justfity-between  md:flex-row flex-col">
       <motion.img
         src={aboutpict}
         alt=""
@@ -108,7 +108,7 @@ export default function About() {
           }}
           triggerAnime={triggerAnime}
         >
-          A <span className="text-gray-500">dedicated</span> Front-end{" "}
+          A <span className="text-gray-500">dedicated</span> Fullstack{" "}
           <span className="text-gray-500"> Developer </span>
           based in <span className="text-gray-500">Semarang</span>, Central Java
         </motion.h1>
@@ -132,7 +132,7 @@ export default function About() {
           triggerAnime={triggerAnime}
         >
           <p className="md:text-[15px]">
-            As a Junior Front-End Developer, I excel in HTML, CSS, JavaScript,
+            As a Junior FUllstack Developer, I excel in HTML, CSS, JavaScript,
             React, and Tailwind. My focus is on creating responsive websites for
             a seamless user experience. I thrive in collaborative environments,
             working effectively with cross-functional teams to deliver

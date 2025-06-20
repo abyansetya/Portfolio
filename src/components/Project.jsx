@@ -89,7 +89,9 @@ export default function Project() {
                     }}
                     className=" flex justify-center items-center  w-[50px] h-[50px] bg-gray-300 border rounded-full pointer-events-auto "
                   >
-                    <LuExternalLink size={23} />
+                    <Link to="/notfound">
+                      <LuExternalLink size={23} />
+                    </Link>
                   </motion.div>
                 </div>
               </div>
@@ -124,7 +126,9 @@ export default function Project() {
                     }}
                     className=" flex justify-center items-center  w-[50px] h-[50px] bg-gray-300 border rounded-full pointer-events-auto "
                   >
-                    <LuExternalLink size={23} />
+                    <Link to="/notfound">
+                      <LuExternalLink size={23} />
+                    </Link>
                   </motion.div>
                 </div>
               </div>
