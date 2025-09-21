@@ -12,18 +12,31 @@ import Footer from "./components/Footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import NotFound from "./components/NotFound";
+import DarkVeil from "./lib/DarkVeil";
 
 export default function App() {
   return (
     <>
       <Router>
         <div className="w-full">
-          <div className="z-[9999] fixed w-full">
+          <div className="z-[9999] fixed w-full ">
             <div className={`${styles.paddingX} ${styles.flexCenter}`}>
               <div className={`${styles.boxWidth}`}>
                 <Navbar />
               </div>
             </div>
+          </div>
+          <div
+            style={{
+              width: "100vw", // full lebar viewport
+              height: "100dvh", // full tinggi viewport (lebih stabil di mobile daripada 100vh)
+              position: "fixed",
+              top: 0,
+              left: 0,
+            }}
+            className="z-[-99] bg-white"
+          >
+            <DarkVeil />
           </div>
 
           <div className="z-1">
