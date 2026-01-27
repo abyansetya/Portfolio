@@ -1,3 +1,5 @@
+import tailwindAnimate from "tailwindcss-animate"; // 1. Import at the top
+
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: ["class"],
@@ -74,5 +76,5 @@ export default {
       xl: "1700px",
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindAnimate], // 2. Use the variable here
 };
