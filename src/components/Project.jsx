@@ -15,10 +15,22 @@ export default function Project() {
   const [width, setWidth] = useState(0);
 
   const carousel = useRef();
+  const innerCarousel = useRef();
 
   useEffect(() => {
-    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  });
+    const handleResize = () => {
+      if (carousel.current && innerCarousel.current) {
+        setWidth(
+          innerCarousel.current.scrollWidth - carousel.current.offsetWidth + 50, // Added buffer
+        );
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const mainControls = useAnimation();
 
@@ -48,6 +60,7 @@ export default function Project() {
           Projects
         </div>
         <motion.div
+          ref={innerCarousel}
           whileTap={{
             cursor: "grabbing",
           }}
@@ -71,6 +84,17 @@ export default function Project() {
                   movie title, image, actress/actor,etc. this web also include
                   search tab that can search a movie.
                 </p>
+                <div className="mx-5 mt-3 flex flex-wrap gap-2 text-sm font-semibold text-gray-700">
+                  <span className="bg-gray-200 px-3 py-1 rounded-full">
+                    React
+                  </span>
+                  <span className="bg-gray-200 px-3 py-1 rounded-full">
+                    Tailwind CSS
+                  </span>
+                  <span className="bg-gray-200 px-3 py-1 rounded-full">
+                    TMDB API
+                  </span>
+                </div>
                 <div className="flex justify-center gap-4 mt-5 cursor-pointer">
                   <motion.div
                     whileHover={{
@@ -108,6 +132,14 @@ export default function Project() {
                   user interfaces and dragged upload file. this web stack is
                   based on react js and tailwind css.
                 </p>
+                <div className="mx-5 mt-3 flex flex-wrap gap-2 text-sm font-semibold text-gray-700">
+                  <span className="bg-gray-200 px-3 py-1 rounded-full">
+                    React JS
+                  </span>
+                  <span className="bg-gray-200 px-3 py-1 rounded-full">
+                    Tailwind CSS
+                  </span>
+                </div>
                 <div className="flex justify-center gap-4 mt-5 cursor-pointer">
                   <motion.div
                     whileHover={{
@@ -148,6 +180,14 @@ export default function Project() {
                   using Tailwind CSS to implement designs and create a
                   responsive website for various devices
                 </p>
+                <div className="mx-5 mt-3 flex flex-wrap gap-2 text-sm font-semibold text-gray-700">
+                  <span className="bg-gray-200 px-3 py-1 rounded-full">
+                    React JS
+                  </span>
+                  <span className="bg-gray-200 px-3 py-1 rounded-full">
+                    Tailwind CSS
+                  </span>
+                </div>
                 <div className="flex justify-center gap-4 mt-5 cursor-pointer">
                   <motion.div
                     whileHover={{
@@ -183,6 +223,14 @@ export default function Project() {
                   about HTML components and how to implement designs using
                   vanilla CSS.
                 </p>
+                <div className="mx-5 mt-3 flex flex-wrap gap-2 text-sm font-semibold text-gray-700">
+                  <span className="bg-gray-200 px-3 py-1 rounded-full">
+                    HTML
+                  </span>
+                  <span className="bg-gray-200 px-3 py-1 rounded-full">
+                    CSS
+                  </span>
+                </div>
                 <div className="flex justify-center gap-4 mt-5 cursor-pointer">
                   <motion.div
                     whileHover={{
@@ -218,6 +266,14 @@ export default function Project() {
                   display. Additionally, I gained knowledge about props in
                   React.js.
                 </p>
+                <div className="mx-5 mt-3 flex flex-wrap gap-2 text-sm font-semibold text-gray-700">
+                  <span className="bg-gray-200 px-3 py-1 rounded-full">
+                    React JS
+                  </span>
+                  <span className="bg-gray-200 px-3 py-1 rounded-full">
+                    API
+                  </span>
+                </div>
                 <div className="flex justify-center gap-4 mt-5 cursor-pointer">
                   <motion.div
                     whileHover={{

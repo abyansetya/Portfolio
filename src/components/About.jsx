@@ -71,7 +71,7 @@ export default function About() {
           rotateX,
           transformStyle: "preserve-3d",
         }}
-        className="sm:w-[400px] md:w-[500px] w-[300px] h-auto pr-5 self-center"
+        className="sm:w-[350px] md:w-[400px] w-[250px] h-auto pr-5 self-center"
         ref={ref}
         initial={{
           y: 100,
@@ -93,7 +93,7 @@ export default function About() {
 
       <div className="font-poppins flex flex-col max-w-4xl pl-5">
         <motion.h1
-          className="mb-5 sm:text-[32px] text-[24px] font-bold "
+          className="mb-5 sm:text-[28px] text-[20px] font-bold "
           ref={ref}
           initial={{
             y: 150,
@@ -135,14 +135,14 @@ export default function About() {
           }}
           triggerAnime={triggerAnime}
         >
-          <p className="md:text-lg">
+          <p className="md:text-base text-sm">
             I’m a software developer focused on building reliable, scalable web
             applications that create real impact. I care about designing
             thoughtful systems, writing structured code, and turning ideas into
             digital products that genuinely solve problems and improve how
             people work.
           </p>
-          <p className="md:text-lg mt-5">
+          <p className="md:text-base text-sm mt-5">
             I’m driven by strong fundamentals and continuous learning, always
             refining how I think, design, and build. For me, good software is
             not just about features, but about clarity, efficiency, and

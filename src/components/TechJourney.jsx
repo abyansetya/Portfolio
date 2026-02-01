@@ -6,12 +6,12 @@ import undip from "../assets/undip.png";
 const experiences = [
   {
     id: 1,
-    role: "Freelance Web Developer",
-    company: "",
+    role: "Community Developer",
+    company: "Enclavium FNF",
     logo: atom, // Using placeholder for now
     date: "Jan 2026 - Present",
     description:
-      "Collaborating with the design team to implement responsive user interfaces using React and Tailwind CSS.",
+      "Contributing to a crypto DAO by building and improving responsive web interfaces using React and Tailwind CSS. Collaborating with cross-functional contributors to enhance usability and support community-driven development.",
   },
   {
     id: 2,
@@ -35,17 +35,17 @@ const experiences = [
 
 const TechJourney = () => {
   return (
-    <div className="w-full text-black flex flex-col p-6 ">
+    <div className="w-full text-black flex flex-col p-4 md:p-6 ">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-3xl md:text-4xl font-bold mb-12 tracking-tight"
+        className="text-2xl md:text-4xl font-bold mb-8 md:mb-12 tracking-tight"
       >
         My <span className="text-gray-500">Tech </span>Journey
       </motion.h2>
 
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-8 md:gap-10">
         {experiences.map((exp, index) => (
           <motion.div
             key={exp.id}
@@ -56,22 +56,25 @@ const TechJourney = () => {
             className="flex flex-col md:flex-row gap-2 md:gap-10 items-start"
           >
             {/* Date Column */}
-            <div className="min-w-[200px] pt-1">
-              <span className="text-md font-semibold text-gray-800">
+            <div className="min-w-[150px] md:min-w-[200px] pt-1">
+              <span className="text-sm md:text-md font-semibold text-gray-800">
                 {exp.date}
               </span>
             </div>
 
             {/* Content Column */}
             <div className="flex flex-col">
-              <div className="flex items-center gap-2 mb-2">
-                <h3 className="text-lg font-bold">{exp.role}</h3>
-                <span className="text-gray-800 text-sm">at</span>
+              <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-2 mb-2">
+                <h3 className="text-md md:text-lg font-bold">{exp.role}</h3>
+                <div className="hidden md:block">
+                  <span className="text-gray-800 text-sm">at</span>
+                </div>
                 <div className="flex items-center gap-2">
-                  <span className="font-bold text-lg">{exp.company}</span>
+                   <span className="md:hidden text-gray-800 text-xs">at</span>
+                  <span className="font-bold text-sm md:text-lg">{exp.company}</span>
                 </div>
               </div>
-              <p className="text-sm text-gray-600 leading-relaxed max-w-2xl">
+              <p className="text-xs md:text-sm text-gray-600 leading-relaxed max-w-2xl">
                 {exp.description}
               </p>
             </div>
@@ -86,27 +89,29 @@ const TechJourney = () => {
           viewport={{ once: true }}
           className="flex flex-col md:flex-row gap-2 md:gap-10 items-start"
         >
-          <div className="min-w-[200px] pt-1">
-            <span className="text-md font-semibold text-gray-800">
+          <div className="min-w-[150px] md:min-w-[200px] pt-1">
+            <span className="text-sm md:text-md font-semibold text-gray-800">
               Aug 2022 - April 2026
             </span>
           </div>
           <div className="flex flex-col">
-            <div className="flex items-center gap-2">
-              <h3 className="text-lg font-bold">Computer Science Degree</h3>
-              <span className="text-gray-500 text-sm ">from</span>
-              <img src={undip} alt={undip} className="w-6 h-6 object-contain" />
-              <span className="font-bold text-lg">Diponegoro University</span>
+            <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-2">
+              <h3 className="text-md md:text-lg font-bold">Computer Science Degree</h3>
+              <div className="flex items-center gap-2">
+                 <span className="text-gray-500 text-xs md:text-sm ">from</span>
+                 <img src={undip} alt={undip} className="w-5 h-5 md:w-6 md:h-6 object-contain" />
+                 <span className="font-bold text-sm md:text-lg">Diponegoro University</span>
+              </div>
             </div>
-            <p className="text-sm text-black font-bold leading-relaxed max-w-xl">
+            <p className="text-xs md:text-sm text-black font-bold leading-relaxed max-w-xl mt-1 md:mt-0">
               {" "}
               GPA : 3.80 / 4.00
             </p>
-            <p className="text-sm text-gray-600 leading-relaxed max-w-xl">
+            <p className="text-xs md:text-sm text-gray-600 leading-relaxed max-w-xl">
               Graduated with honors. Focused on Software Engineering and
               scalable systems.
             </p>
-            <ul className="list-disc list-outside ml-4 mt-2 text-sm text-gray-600 space-y-1">
+            <ul className="list-disc list-outside ml-4 mt-2 text-xs md:text-sm text-gray-600 space-y-1">
               <li>
                 <span className="font-bold text-gray-800">
                   Laboratory Teaching Assistant:

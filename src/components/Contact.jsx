@@ -150,7 +150,7 @@ export default function Contact() {
             </p>
             <div>
               <h1 className="font-bold text-[25px] pt-4 text-[#7d7d7d]">
-                Let's get social
+                Let's Connect
               </h1>
               <div className="flex flex-col mt-2">
                 <div className="flex items-center gap-2">
