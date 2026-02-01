@@ -14,6 +14,8 @@ import "react-toastify/dist/ReactToastify.css";
 import NotFound from "./components/NotFound";
 import DarkVeil from "./lib/DarkVeil";
 //w
+import TechJourney from "./components/TechJourney";
+
 export default function App() {
   return (
     <>
@@ -49,12 +51,16 @@ export default function App() {
               </div>
             </section>
             <section
-              className={`${styles.paddingX} ${styles.flexStart} sm:py-6 h-[100%]`}
+              className={`${styles.paddingX} min-h-screen py-10 items-center flex`}
               id="About"
             >
-              <div className="">
-                <About />
-              </div>
+              <About />
+            </section>
+            <section
+              className={`${styles.paddingX}  py-10 min-h-screen items-center flex`}
+              id="TechJourney"
+            >
+              <TechJourney />
             </section>
             <section
               className={`${styles.paddingX} pt-16 md:pt-6 h-[100%]`}

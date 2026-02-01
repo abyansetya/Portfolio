@@ -1,5 +1,4 @@
 import React from "react";
-import profilepict from "../assets/profilepict.svg";
 import cv from "../assets/CV_AbyanSetyaneva_Updated.pdf";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { motion } from "framer-motion";
@@ -12,17 +11,6 @@ import DarkVeil from "@/lib/DarkVeil";
 init({ data });
 
 export default function Hero() {
-  const [text] = useTypewriter({
-    words: ["ull Stack Developer"],
-    loop: {},
-    typeSpeed: 120,
-    deleteSpeed: 50,
-  });
-
-  function readme() {
-    window.open(cv);
-  }
-
   return (
     <div className="flex justify-center sm:gap-[5rem] gap-[1rem] py-20 h-[100vh] px-16 w-full md:flex-row flex-col z-1">
       <div className="self-center text-center font-poppins font-[500] flex items-center gap-2 flex-col">

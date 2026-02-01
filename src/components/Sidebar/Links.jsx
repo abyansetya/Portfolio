@@ -25,7 +25,7 @@ const itemVariants = {
 };
 
 const Links = (props) => {
-  const items = ["About", "Projects", "Experiences", "Contact"];
+  const items = ["About", "TechJourney", "Projects", "Experiences", "Contact"];
 
   function toggle() {
     props.Open((prev) => !prev);
