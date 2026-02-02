@@ -3,7 +3,7 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import { FiGithub } from "react-icons/fi";
 import { LuExternalLink } from "react-icons/lu";
 import { Link } from "react-router-dom";
-import logbook from "../assets/k.png";
+import logbook from "../assets/logbook.png";
 import anforcom from "../assets/anforcom.png";
 import adminpanel from "../assets/adminpanel.png";
 import anforcomlandingpage from "../assets/anforcomlandingpage.png";
