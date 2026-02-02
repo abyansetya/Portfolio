@@ -14,18 +14,18 @@ const styles1 = {
 const images = [sertif1, sertif2, sertif3];
 
 const skillsData = [
-  { name: "HTML", level: "Intermediate" },
-  { name: "CSS", level: "Intermediate" },
+  { name: "Typescript", level: "Intermediate" },
+  { name: "Next JS", level: "Intermediate" },
   { name: "Javascript", level: "Intermediate" },
   { name: "mySQL", level: "Intermediate" },
-  { name: "Figma", level: "Intermediate" },
-  { name: "Express JS", level: "Beginner" },
-  { name: "python", level: "Beginner" },
+  { name: "React Router v7", level: "Intermediate" },
+  { name: "Express JS", level: "Intermediate" },
+  { name: "MongoDB", level: "Intermediate" },
   { name: "React JS", level: "Intermediate" },
   { name: "Tailwind CSS", level: "Intermediate" },
-  { name: "Java", level: "Basic" },
-  { name: "PostgreSQL", level: "Beginner" },
-  { name: "Node JS", level: "Beginner" },
+  { name: "Laravel", level: "Intermediate" },
+  { name: "PostgreSQL", level: "Intermediate" },
+  { name: "Inertia JS", level: "Intermediate" },
 ];
 
 export default function Experience() {

@@ -164,7 +164,7 @@ export default function About() {
           <div className="mt-8 flex items-center">
             <h1 className="font-bold md:text-lg text-sm">Tech Stack</h1>
             <div className="h-[23px] border border-black ml-[10px] " />
-            <div className="flex gap-5 justify-between ml-[10px] ">
+            <div className="flex flex-wrap gap-5 ml-[10px]">
               <div className="relative group flex justify-center items-center">
                 <motion.img
                   whileHover={{
@@ -172,7 +172,7 @@ export default function About() {
                   }}
                   src={atom}
                   alt="React JS"
-                  className="h-[23px] md:h-[30px]"
+                  className="h-[23px] md:h-[30px] w-auto object-contain"
                 />
                 <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-[10px] font-medium px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
                   React JS
@@ -186,7 +186,7 @@ export default function About() {
                   }}
                   src={typescript}
                   alt="TypeScript"
-                  className="h-[23px] md:h-[30px]"
+                  className="h-[23px] md:h-[30px] w-auto object-contain"
                 />
                 <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-[10px] font-medium px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
                   TypeScript
@@ -200,7 +200,7 @@ export default function About() {
                   }}
                   src={nextjs}
                   alt="Next.js"
-                  className="h-[23px] md:h-[30px]"
+                  className="h-[23px] md:h-[30px] w-auto object-contain"
                 />
                 <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-[10px] font-medium px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
                   Next.js
@@ -214,7 +214,7 @@ export default function About() {
                   }}
                   src={laravel}
                   alt="Laravel"
-                  className="h-[23px] md:h-[30px]"
+                  className="h-[23px] md:h-[30px] w-auto object-contain"
                 />
                 <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-[10px] font-medium px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
                   Laravel
@@ -228,7 +228,7 @@ export default function About() {
                   }}
                   src={nodejs}
                   alt="Node.js"
-                  className="h-[23px] md:h-[30px]"
+                  className="h-[23px] md:h-[30px] w-auto object-contain"
                 />
                 <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-[10px] font-medium px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
                   Node.js
@@ -242,7 +242,7 @@ export default function About() {
                   }}
                   src={postgresql}
                   alt="PostgreSQL"
-                  className="h-[23px] md:h-[30px]"
+                  className="h-[23px] md:h-[30px] w-auto object-contain"
                 />
                 <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-[10px] font-medium px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
                   PostgreSQL
@@ -256,7 +256,7 @@ export default function About() {
                   }}
                   src={tailwind}
                   alt="Tailwind CSS"
-                  className="h-[23px] md:h-[30px]"
+                  className="h-[23px] md:h-[30px] w-auto object-contain"
                 />
                 <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-[10px] font-medium px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
                   Tailwind CSS

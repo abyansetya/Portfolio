@@ -11,9 +11,12 @@ export default function Footer() {
         <img src={logo} className="w-[40px] ml-2 mr-2" alt="" />
         <div className="w-full h-[0.5px] border  border-black " />
       </div>
-      <div className="mb-5 flex justify-between">
+      <div className="mb-5 flex justify-between items-center">
         <p>Abyan Setya</p>
         <Thankyou />
+      </div>
+      <div className="pb-5 text-center text-sm text-gray-600">
+        <p>Copyright © 2026 Abyan Setya. All rights reserved.</p>
       </div>
     </div>
   );
