@@ -7,7 +7,7 @@ import logbook from "../assets/logbook.png";
 import anforcom from "../assets/anforcom.png";
 import adminpanel from "../assets/adminpanel.png";
 import sial from "../assets/sial.png";
-import enclavium from "../assets/enclavium.png";
+import enclavium from "../assets/Enclavium.png";
 
 const projectsData = [
   {
