@@ -183,10 +183,7 @@ export default function Contact() {
                   />
                   <h1 className="hover:font-semibold">
                     {" "}
-                    <a href="https://www.linkedin.com/in/abyan-setya-879042229">
-                      {" "}
-                      Abyan Setya{" "}
-                    </a>
+                    <a href="www.linkedin.com/in/abyansetya"> Abyan Setya </a>
                   </h1>
                 </div>
                 <div className="flex gap-2 items-center mt-3">
