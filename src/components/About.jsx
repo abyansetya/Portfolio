@@ -115,7 +115,8 @@ export default function About() {
         >
           A <span className="text-gray-500">dedicated</span> Fullstack{" "}
           <span className="text-gray-500"> Developer </span>
-          based in <span className="text-gray-500">Semarang</span>, Central Java
+          based in <span className="text-gray-500">Semarang</span>, Central
+          Java, Indonesia
         </motion.h1>
         <motion.div
           ref={ref}
