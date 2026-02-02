@@ -47,7 +47,7 @@ const projectsData = [
 
   {
     title: "Anforcom - Landing Page",
-    image: ,
+    image: anforcomlandingpage,
     description:
       "A landing page created to present competition information clearly and attractively. Built with semantic HTML and vanilla CSS to deliver a clean, responsive layout focused on clarity and accessibility.",
     techStack: ["React JS", "Tailwind CSS", "Framer Motion"],
