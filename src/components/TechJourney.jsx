@@ -140,6 +140,22 @@ const TechJourney = () => {
                 Program (PKM), assisting in the formulation of accurate research
                 proposals.
               </li>
+              <li>
+  <span className="font-bold text-gray-800">
+    Presenter & First Author — International Conference on Informatics and Computational Sciences (ICICoS) 2025:
+  </span>{" "}
+  Presented research and published a paper in IEEE Xplore as the first author.
+  {" "}
+  <a
+    href="https://ieeexplore.ieee.org/document/11330003/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-blue-600 font-semibold underline"
+  >
+    View publication
+  </a>
+</li>
+
             </ul>
           </div>
         </motion.div>

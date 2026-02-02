@@ -13,6 +13,21 @@ const styles1 = {
 
 const images = [sertif1, sertif2, sertif3];
 
+const skillsData = [
+  { name: "HTML", level: "Intermediate" },
+  { name: "CSS", level: "Intermediate" },
+  { name: "Javascript", level: "Intermediate" },
+  { name: "mySQL", level: "Intermediate" },
+  { name: "Figma", level: "Intermediate" },
+  { name: "Express JS", level: "Beginner" },
+  { name: "python", level: "Beginner" },
+  { name: "React JS", level: "Intermediate" },
+  { name: "Tailwind CSS", level: "Intermediate" },
+  { name: "Java", level: "Basic" },
+  { name: "PostgreSQL", level: "Beginner" },
+  { name: "Node JS", level: "Beginner" },
+];
+
 export default function Experience() {
   const [idx, setIdx] = React.useState(0);
   const [triggerAnime, setTriggerAnime] = React.useState(false);
@@ -54,7 +69,6 @@ export default function Experience() {
         type: "spring",
         stiffness: 50,
       }}
-      triggerAnime={triggerAnime}
       className=" pt-12 font-poppins flex flex-col justify-center"
     >
       <div className="title flex justify-end">
@@ -68,54 +82,15 @@ export default function Experience() {
           </div>
           <div className="skills mt-4 px-4 flex items-center h-[80%]">
             <div className="innerskills flex w-full justify-between  flex-wrap p-2">
-              <div className="sm:basis-4/12 flex flex-col items-center p-5">
-                <h1 className={`${styles1.header}`}>HTML</h1>
-                <p className={`${styles1.paragraph}`}>Intermediate</p>
-              </div>
-              <div className="sm:basis-4/12   flex flex-col items-center p-5">
-                <p className={`${styles1.header}`}>CSS</p>
-                <p className={`${styles1.paragraph}`}>Intermediate</p>
-              </div>
-              <div className="sm:basis-4/12   flex flex-col items-center p-5">
-                <p className={`${styles1.header}`}>Javascript</p>
-                <p className={`${styles1.paragraph}`}>Intermediate</p>
-              </div>
-              <div className="sm:basis-4/12 b flex flex-col items-center p-5">
-                <p className={`${styles1.header}`}>mySQL</p>
-                <p className={`${styles1.paragraph}`}>Intermediate</p>
-              </div>
-              <div className="sm:basis-4/12 b flex flex-col items-center p-5">
-                <p className={`${styles1.header}`}>Figma</p>
-                <p className={`${styles1.paragraph}`}>Intermediate</p>
-              </div>
-              <div className="sm:basis-4/12 b flex flex-col items-center p-5">
-                <p className={`${styles1.header}`}>Express JS</p>
-                <p className={`${styles1.paragraph}`}>Beginner</p>
-              </div>
-              <div className="sm:basis-4/12   flex flex-col items-center p-5">
-                <p className={`${styles1.header}`}>python</p>
-                <p className={`${styles1.paragraph}`}>Beginner</p>
-              </div>
-              <div className="sm: flex flex-col items-center p-5">
-                <p className={`${styles1.header}`}>React JS</p>
-                <p className={`${styles1.paragraph}`}>Intermediate</p>
-              </div>
-              <div className="sm:basis-4/12   flex flex-col items-center p-5">
-                <p className={`${styles1.header}`}>Tailwind CSS</p>
-                <p className={`${styles1.paragraph}`}>Intermediate</p>
-              </div>
-              <div className="sm:basis-4/12   flex flex-col items-center p-5">
-                <p className={`${styles1.header}`}>Java</p>
-                <p className={`${styles1.paragraph}`}>Basic</p>
-              </div>
-              <div className="sm:basis-4/12   flex flex-col items-center p-5">
-                <p className={`${styles1.header}`}>PostgreSQL</p>
-                <p className={`${styles1.paragraph}`}>Beginner</p>
-              </div>
-              <div className="sm:basis-4/12   flex flex-col items-center p-5">
-                <p className={`${styles1.header}`}>Node JS</p>
-                <p className={`${styles1.paragraph}`}>Beginner</p>
-              </div>
+              {skillsData.map((skill, index) => (
+                <div
+                  key={index}
+                  className="sm:basis-4/12 flex flex-col items-center p-5"
+                >
+                  <h1 className={`${styles1.header}`}>{skill.name}</h1>
+                  <p className={`${styles1.paragraph}`}>{skill.level}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -124,27 +99,29 @@ export default function Experience() {
             <h1 className="font-bold">Certificates</h1>
             <div className="w-[120px] border border-black h-[1px] mb-2" />
           </div>
-          <div className="carousel flex h-full items-center justify-center">
-            <div className="innercarousel aspect-video relative pt-5">
-              <div className="img ">
+          <div className="carousel flex h-full flex-col items-center justify-center">
+            <div className="innercarousel aspect-video relative pt-5 flex flex-col items-center">
+              <div className="img">
                 <img
                   src={images[idx]}
-                  alt=""
-                  className="sm:h-[300px] sm:w-[400px] w-[300px] h-[230px] flex items-center "
+                  alt="Certificate"
+                  className="sm:h-[300px] sm:w-[400px] w-[300px] h-[230px] flex items-center object-contain"
                 />
+              </div>
+              <div className="flex justify-center gap-5 mt-6 w-full">
                 <button
                   onClick={prev}
-                  className={`${styles.button} sm:left-[16px] left-0 absolute top-[50%] `}
+                  className={`${styles.button} flex items-center justify-center`}
                 >
                   <div className="mr-1">◀</div>
                 </button>
+                <button
+                  onClick={next}
+                  className={`${styles.button} flex items-center justify-center`}
+                >
+                  <div className="ml-1">▶</div>
+                </button>
               </div>
-              <button
-                onClick={next}
-                className={`${styles.button} sm:right-[16px] right-0 absolute top-[50%]`}
-              >
-                <div className="ml-1">▶</div>
-              </button>
             </div>
           </div>
         </div>

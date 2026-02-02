@@ -210,8 +210,8 @@ export default function Contact() {
             </label>
             <input
               type="text"
-              className=" border-2 border-black rounded pl-2 pr-2"
-              placeholder="jessica"
+              className=" border-2 border-black rounded px-2 py-2"
+              placeholder="Your Name"
               name="user_name"
               value={formData.user_name}
               onChange={handleInputChange}
@@ -219,7 +219,7 @@ export default function Contact() {
             <label htmlFor="">Email</label>
             <input
               type="email"
-              className=" border-2 border-black rounded pl-2 pr-2"
+              className=" border-2 border-black rounded px-2 py-2"
               placeholder="youremail@gmail.com"
               name="user_email"
               value={formData.user_email}
@@ -231,7 +231,7 @@ export default function Contact() {
               id=""
               cols="30"
               rows="10"
-              className=" border-2 border-black rounded pl-2 pr-2 "
+              className=" border-2 border-black rounded px-2 py-2 "
               placeholder="messages"
               value={formData.message}
               onChange={handleInputChange}

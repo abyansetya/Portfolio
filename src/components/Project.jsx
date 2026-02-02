@@ -1,13 +1,135 @@
 import React, { useEffect, useRef, useState } from "react";
-import frame1 from "../assets/Frame 1.svg";
-import frame2 from "../assets/Frame 2.svg";
-import frame3 from "../assets/Frame 3.svg";
-import netfreak from "../assets/netfreak.svg";
-import pdfwiz from "../assets/pdfwiz.svg";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { FiGithub } from "react-icons/fi";
 import { LuExternalLink } from "react-icons/lu";
 import { Link } from "react-router-dom";
+import logbook from "../assets/k.png";
+import anforcom from "../assets/anforcom.png";
+import adminpanel from "../assets/adminpanel.png";
+import anforcomlandingpage from "../assets/anforcomlandingpage.png";
+import sial from "../assets/sial.png";
+
+const projectsData = [
+  {
+    title: "Sistem Informasi Kerja Sama - Dirinovki Undip",
+    image: logbook,
+    description:
+      "A web-based logbook application developed for Dirinovki Undip to record, monitor, and manage daily activity reports efficiently. The system helps streamline documentation, improve data organization, and support operational oversight.",
+    techStack: [
+      "Laravel API",
+      "React Router v7",
+      "Typescript",
+      "Tailwind CSS",
+      "MySQL",
+    ],
+    githubUrl: "https://github.com/abyansetya/Logbook_BE",
+    externalUrl: "https://github.com/abyansetya/Logbook_FE",
+  },
+  {
+    title: "Anforcom - Competition Registration",
+    image: anforcom,
+    description:
+      "A web application built to handle competition registration with a smooth and user-friendly submission flow. Designed to simplify participant data entry and document uploads while ensuring a clean and responsive interface.",
+    techStack: ["Next JS", "Tailwind CSS", "MongoDB"],
+    githubUrl: "#",
+    externalUrl: "#",
+  },
+  {
+    title: "Anforcom - API Dashboard",
+    image: adminpanel,
+    description:
+      "An admin dashboard built to manage competition data and monitor submissions through a structured interface. Developed using AdminLTE to provide a familiar, efficient layout for data management and operational control.",
+    techStack: ["AdminLTE", "React JS", "Node JS", "Tailwind CSS"],
+    githubUrl: "#",
+    externalUrl: "#",
+  },
+
+  {
+    title: "Anforcom - Landing Page",
+    image: anforcomlandingpage,
+    description:
+      "A landing page created to present competition information clearly and attractively. Built with semantic HTML and vanilla CSS to deliver a clean, responsive layout focused on clarity and accessibility.",
+    techStack: ["React JS", "Tailwind CSS", "Framer Motion"],
+    githubUrl: "https://github.com/abyansetya/Anforcom2024-fe",
+    externalUrl: "#",
+  },
+  {
+    title: "SIAL - Sistem Informasi Akademik Lengkap",
+    image: sial,
+    description:
+      "A web-based academic information system built to manage and display academic data through a dynamic interface. Focused on implementing component-based architecture, state management, and API-driven content rendering.",
+    techStack: ["Laravel", "Inertia JS", "Tailwind CSS", "MySQL"],
+    githubUrl:
+      "https://github.com/abyansetya/Sistem-Informasi-Akademik-Lengkap",
+    externalUrl: "#",
+  },
+];
+
+const ProjectCard = ({ project }) => {
+  return (
+    <div className="pointer-events-none item">
+      <img
+        src={project.image}
+        alt={project.title}
+        className="sm:w-[500px] w-[350px] "
+      />
+      <div className="sm:w-[500px] w-[350px]">
+        <h1 className="justify-center flex font-bold text-center">
+          {project.title}
+        </h1>
+        <p className="mx-5 text-justify mt-2 sm:text-[16px] text-[15px]">
+          {project.description}
+        </p>
+        <div className="mx-5 mt-3 flex flex-wrap gap-2 text-sm font-semibold text-gray-700">
+          {project.techStack.map((tech, index) => (
+            <span key={index} className="bg-gray-200 px-3 py-1 rounded-full">
+              {tech}
+            </span>
+          ))}
+        </div>
+        <div className="flex justify-center gap-4 mt-5 cursor-pointer">
+          <motion.div
+            whileHover={{ y: -10 }}
+            className="flex justify-center items-center w-[50px] h-[50px] bg-gray-300 border rounded-full pointer-events-auto"
+          >
+            {project.githubUrl.startsWith("http") ? (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FiGithub size={23} />
+              </a>
+            ) : (
+              <FiGithub size={23} />
+            )}
+          </motion.div>
+
+          <motion.div
+            whileHover={{ y: -10 }}
+            className="flex justify-center items-center w-[50px] h-[50px] bg-gray-300 border rounded-full pointer-events-auto"
+          >
+            {project.externalUrl.startsWith("/") ? (
+              <Link to={project.externalUrl}>
+                <LuExternalLink size={23} />
+              </Link>
+            ) : project.externalUrl.startsWith("http") ? (
+              <a
+                href={project.externalUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <LuExternalLink size={23} />
+              </a>
+            ) : (
+              <LuExternalLink size={23} />
+            )}
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default function Project() {
   const ref = useRef(null);
@@ -21,7 +143,7 @@ export default function Project() {
     const handleResize = () => {
       if (carousel.current && innerCarousel.current) {
         setWidth(
-          innerCarousel.current.scrollWidth - carousel.current.offsetWidth + 50, // Added buffer
+          innerCarousel.current.scrollWidth - carousel.current.offsetWidth + 50,
         );
       }
     };
@@ -38,13 +160,13 @@ export default function Project() {
     if (isInView) {
       mainControls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, mainControls]);
 
   return (
     <div ref={ref}>
       <motion.div
         ref={carousel}
-        className="overflow-hidden "
+        className="overflow-hidden"
         variants={{
           hidden: { opacity: 0, y: 75, scale: 0.5 },
           visible: { opacity: 1, y: 0, scale: 1 },
@@ -61,10 +183,8 @@ export default function Project() {
         </div>
         <motion.div
           ref={innerCarousel}
-          whileTap={{
-            cursor: "grabbing",
-          }}
-          className=" carousel font-poppins px-6 flex cursor-grab snap-x"
+          whileTap={{ cursor: "grabbing" }}
+          className="carousel font-poppins px-6 flex cursor-grab snap-x"
           drag="x"
           dragConstraints={{
             right: 0,
@@ -72,229 +192,9 @@ export default function Project() {
           }}
         >
           <div className="innercarousel flex snap-x">
-            <div className="pointer-events-none item">
-              <img src={netfreak} alt="" className="sm:w-[500px] w-[350px] " />
-              <div className="sm:w-[500px] w-[350px]">
-                <h1 className="justify-center flex font-bold">
-                  NETFREAK - netflix clone
-                </h1>
-                <p className="mx-5 text-justify mt-2 sm:text-[16px] text-[15px]">
-                  The web that i created for cloning netflix website but using
-                  TMBD API. web content is mostly fetched from tmdb api ex.
-                  movie title, image, actress/actor,etc. this web also include
-                  search tab that can search a movie.
-                </p>
-                <div className="mx-5 mt-3 flex flex-wrap gap-2 text-sm font-semibold text-gray-700">
-                  <span className="bg-gray-200 px-3 py-1 rounded-full">
-                    React
-                  </span>
-                  <span className="bg-gray-200 px-3 py-1 rounded-full">
-                    Tailwind CSS
-                  </span>
-                  <span className="bg-gray-200 px-3 py-1 rounded-full">
-                    TMDB API
-                  </span>
-                </div>
-                <div className="flex justify-center gap-4 mt-5 cursor-pointer">
-                  <motion.div
-                    whileHover={{
-                      y: -10,
-                    }}
-                    className=" flex justify-center items-center  w-[50px] h-[50px] bg-gray-300 border rounded-full pointer-events-auto "
-                  >
-                    <a href="https://github.com/abyansetya/NETFREAK">
-                      <FiGithub size={23} />
-                    </a>
-                  </motion.div>
-
-                  <motion.div
-                    whileHover={{
-                      y: -10,
-                    }}
-                    className=" flex justify-center items-center  w-[50px] h-[50px] bg-gray-300 border rounded-full pointer-events-auto "
-                  >
-                    <Link to="/notfound">
-                      <LuExternalLink size={23} />
-                    </Link>
-                  </motion.div>
-                </div>
-              </div>
-            </div>
-
-            <div className="pointer-events-none item">
-              <img src={pdfwiz} alt="" className="sm:w-[500px] w-[350px] " />
-              <div className="sm:w-[500px] w-[350px]">
-                <h1 className="justify-center flex font-bold">
-                  PDF Wizard - ilovepdf clone
-                </h1>
-                <p className="mx-5 text-justify mt-2 sm:text-[16px] text-[15px]">
-                  The web that i created for cloning ilovepdf with interactive
-                  user interfaces and dragged upload file. this web stack is
-                  based on react js and tailwind css.
-                </p>
-                <div className="mx-5 mt-3 flex flex-wrap gap-2 text-sm font-semibold text-gray-700">
-                  <span className="bg-gray-200 px-3 py-1 rounded-full">
-                    React JS
-                  </span>
-                  <span className="bg-gray-200 px-3 py-1 rounded-full">
-                    Tailwind CSS
-                  </span>
-                </div>
-                <div className="flex justify-center gap-4 mt-5 cursor-pointer">
-                  <motion.div
-                    whileHover={{
-                      y: -10,
-                    }}
-                    className=" flex justify-center items-center  w-[50px] h-[50px] bg-gray-300 border rounded-full pointer-events-auto "
-                  >
-                    <a href="https://github.com/abyansetya/PDF-WIZARD">
-                      <FiGithub size={23} />
-                    </a>
-                  </motion.div>
-
-                  <motion.div
-                    whileHover={{
-                      y: -10,
-                    }}
-                    className=" flex justify-center items-center  w-[50px] h-[50px] bg-gray-300 border rounded-full pointer-events-auto "
-                  >
-                    <Link to="/notfound">
-                      <LuExternalLink size={23} />
-                    </Link>
-                  </motion.div>
-                </div>
-              </div>
-            </div>
-
-            <div className="pointer-events-none item">
-              <img src={frame1} alt="" className="sm:w-[500px] w-[350px] " />
-              <div className="sm:w-[500px] w-[350px]">
-                <h1 className="justify-center flex font-bold">
-                  Modern Bank - Landing Page
-                </h1>
-                <p className="mx-5 text-justify mt-2 sm:text-[16px] text-[15px]">
-                  The landing page I created while following a React.js and
-                  Tailwind CSS course on YouTube. During the development of this
-                  website, I learned about React components and how to organize
-                  documents systematically. Additionally, I gained insights into
-                  using Tailwind CSS to implement designs and create a
-                  responsive website for various devices
-                </p>
-                <div className="mx-5 mt-3 flex flex-wrap gap-2 text-sm font-semibold text-gray-700">
-                  <span className="bg-gray-200 px-3 py-1 rounded-full">
-                    React JS
-                  </span>
-                  <span className="bg-gray-200 px-3 py-1 rounded-full">
-                    Tailwind CSS
-                  </span>
-                </div>
-                <div className="flex justify-center gap-4 mt-5 cursor-pointer">
-                  <motion.div
-                    whileHover={{
-                      y: -10,
-                    }}
-                    className=" flex justify-center items-center  w-[50px] h-[50px] bg-gray-300 border rounded-full pointer-events-auto "
-                  >
-                    <FiGithub size={23} />
-                  </motion.div>
-
-                  <motion.div
-                    whileHover={{
-                      y: -10,
-                    }}
-                    className=" flex justify-center items-center  w-[50px] h-[50px] bg-gray-300 border rounded-full pointer-events-auto "
-                  >
-                    <LuExternalLink size={23} />
-                  </motion.div>
-                </div>
-              </div>
-            </div>
-
-            <div className="pointer-events-none">
-              <img src={frame2} alt=" " className="sm:w-[500px] w-[350px]" />
-              <div className="sm:w-[500px] w-[350px]">
-                <h1 className="justify-center flex font-bold">
-                  Personal Website
-                </h1>
-                <p className="mx-5 text-justify mt-2 sm:text-[16px] text-[15px]">
-                  This is the website I created as my final project in the
-                  Dicoding basic web programming course. For this website, I
-                  utilized HTML and CSS. While developing the site, I learned
-                  about HTML components and how to implement designs using
-                  vanilla CSS.
-                </p>
-                <div className="mx-5 mt-3 flex flex-wrap gap-2 text-sm font-semibold text-gray-700">
-                  <span className="bg-gray-200 px-3 py-1 rounded-full">
-                    HTML
-                  </span>
-                  <span className="bg-gray-200 px-3 py-1 rounded-full">
-                    CSS
-                  </span>
-                </div>
-                <div className="flex justify-center gap-4 mt-5 cursor-pointer">
-                  <motion.div
-                    whileHover={{
-                      y: -10,
-                    }}
-                    className=" flex justify-center items-center  w-[50px] h-[50px] bg-gray-300 border rounded-full pointer-events-auto "
-                  >
-                    <FiGithub size={23} />
-                  </motion.div>
-
-                  <motion.div
-                    whileHover={{
-                      y: -10,
-                    }}
-                    className=" flex justify-center items-center  w-[50px] h-[50px] bg-gray-300 border rounded-full pointer-events-auto "
-                  >
-                    <LuExternalLink size={23} />
-                  </motion.div>
-                </div>
-              </div>
-            </div>
-            <div className="pointer-events-none">
-              <img src={frame3} alt="" className="sm:w-[500px] w-[350px]" />
-              <div className="sm:w-[500px] w-[350px]">
-                <h1 className="justify-center flex font-bold">
-                  Meme Generator
-                </h1>
-                <p className="mx-5 text-justify mt-2 sm:text-[16px] text-[15px]">
-                  The website I created while taking the React.js course on
-                  scrimba.com. On this website, I studied React hooks components
-                  such as useState, useRef, and useEffect. I also learned how to
-                  fetch data from an API and implement it into the website's
-                  display. Additionally, I gained knowledge about props in
-                  React.js.
-                </p>
-                <div className="mx-5 mt-3 flex flex-wrap gap-2 text-sm font-semibold text-gray-700">
-                  <span className="bg-gray-200 px-3 py-1 rounded-full">
-                    React JS
-                  </span>
-                  <span className="bg-gray-200 px-3 py-1 rounded-full">
-                    API
-                  </span>
-                </div>
-                <div className="flex justify-center gap-4 mt-5 cursor-pointer">
-                  <motion.div
-                    whileHover={{
-                      y: -10,
-                    }}
-                    className=" flex justify-center items-center  w-[50px] h-[50px] bg-gray-300 border rounded-full pointer-events-auto "
-                  >
-                    <FiGithub size={23} />
-                  </motion.div>
-
-                  <motion.div
-                    whileHover={{
-                      y: -10,
-                    }}
-                    className=" flex justify-center items-center  w-[50px] h-[50px] bg-gray-300 border rounded-full pointer-events-auto "
-                  >
-                    <LuExternalLink size={23} />
-                  </motion.div>
-                </div>
-              </div>
-            </div>
+            {projectsData.map((project, index) => (
+              <ProjectCard key={index} project={project} />
+            ))}
           </div>
         </motion.div>
       </motion.div>

@@ -16,7 +16,7 @@ const styles = {
   marginX: "sm:mx-16 mx-6",
   marginY: "sm:my-16 my-6",
   button:
-    " text-[18px] w-[30px] align-center translate-y-[-50%] rounded-full bg-gray-300 border-solid h-[30px] justify-center cursor-pointer text-center text-black ",
+    " text-[18px] w-[40px] hover:scale-110 align-center rounded-full bg-gray-500 border-solid h-[30px] justify-center cursor-pointer text-center text-black ",
 };
 
 export default styles;

@@ -12,6 +12,7 @@ import nextjs from "../assets/Next.js.png";
 import laravel from "../assets/laravel.png";
 import nodejs from "../assets/nodejs.png";
 import postgresql from "../assets/postgresql.png";
+import cv from "../assets/CV_AbyanSetyaneva_Updated.pdf";
 export default function About() {
   const [triggerAnime, setTriggerAnime] = React.useState(false);
   const [ref, inView] = useInView({
@@ -151,6 +152,15 @@ export default function About() {
             are easy to maintain and adapt over time. This mindset helps me
             approach every project with purpose and thoughtful execution.
           </p>
+          <div className="mt-5">
+            <a
+              href={cv}
+              download="CV_AbyanSetyaneva.pdf"
+              className="inline-block bg-black text-white px-6 py-2 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-300"
+            >
+              Read More
+            </a>
+          </div>
           <div className="mt-8 flex items-center">
             <h1 className="font-bold md:text-lg text-sm">Tech Stack</h1>
             <div className="h-[23px] border border-black ml-[10px] " />
