@@ -28,6 +28,22 @@ const projectsData = [
     externalUrl: "https://github.com/abyansetya/Logbook_FE",
   },
   {
+    title: "Predicare AI - General Hospital Dr. Kariadi, Semarang",
+    image: kariadi,
+    description:
+      "A clinical prediction application that estimates patient treatment costs based on ICD diagnosis codes and recommends potential medications using XGBoost and Random Forest models. Designed to support hospital decision-making through data-driven, real-time predictions.",
+    techStack: [
+      "Next JS",
+      ".NET",
+      "Tailwind CSS",
+      "ShadCn UI",
+      "XGBoost",
+      "Random Forest",
+    ],
+    githubUrl: "#",
+    externalUrl: "#",
+  },
+  {
     title: "Anforcom - Competition Registration",
     image: anforcom,
     description:
@@ -71,22 +87,6 @@ const projectsData = [
     description:
       "A modern landing page built for a crypto DAO to communicate its vision and community values through an engaging, responsive interface. Focused on smooth animations, clear structure, and an intuitive user experience.",
     techStack: ["Next JS", "Tailwind CSS", "ShadCn UI"],
-    githubUrl: "#",
-    externalUrl: "#",
-  },
-  {
-    title: "Predicare AI - General Hospital Dr. Kariadi, Semarang",
-    image: kariadi,
-    description:
-      "A clinical prediction application that estimates patient treatment costs based on ICD diagnosis codes and recommends potential medications using XGBoost and Random Forest models. Designed to support hospital decision-making through data-driven, real-time predictions.",
-    techStack: [
-      "Next JS",
-      ".NET",
-      "Tailwind CSS",
-      "ShadCn UI",
-      "XGBoost",
-      "Random Forest",
-    ],
     githubUrl: "#",
     externalUrl: "#",
   },
