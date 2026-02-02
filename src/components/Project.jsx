@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import logbook from "../assets/logbook.png";
 import anforcom from "../assets/anforcom.png";
 import adminpanel from "../assets/adminpanel.png";
+import anforcomlandingpage from "../assets/anforcomlandingpage.png";
 import sial from "../assets/sial.png";
 import enclavium from "../assets/Enclavium.png";
 
@@ -46,7 +47,7 @@ const projectsData = [
 
   {
     title: "Anforcom - Landing Page",
-    image: anforcomlandingpage,
+    image: ,
     description:
       "A landing page created to present competition information clearly and attractively. Built with semantic HTML and vanilla CSS to deliver a clean, responsive layout focused on clarity and accessibility.",
     techStack: ["React JS", "Tailwind CSS", "Framer Motion"],
