@@ -8,6 +8,7 @@ import anforcom from "../assets/anforcom.png";
 import adminpanel from "../assets/adminpanel.png";
 import anforcomlandingpage from "../assets/anforcomlandingpage.png";
 import sial from "../assets/sial.png";
+import enclavium from "../assets/enclavium.png";
 
 const projectsData = [
   {
@@ -61,6 +62,15 @@ const projectsData = [
     techStack: ["Laravel", "Inertia JS", "Tailwind CSS", "MySQL"],
     githubUrl:
       "https://github.com/abyansetya/Sistem-Informasi-Akademik-Lengkap",
+    externalUrl: "#",
+  },
+  {
+    title: "Enclavium - Landing Page",
+    image: enclavium,
+    description:
+      "A modern landing page built for a crypto DAO to communicate its vision and community values through an engaging, responsive interface. Focused on smooth animations, clear structure, and an intuitive user experience.",
+    techStack: ["Next JS", "Tailwind CSS", "ShadCn UI"],
+    githubUrl: "#",
     externalUrl: "#",
   },
 ];
