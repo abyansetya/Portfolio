@@ -113,8 +113,8 @@ export default function About() {
           }}
           triggerAnime={triggerAnime}
         >
-          A <span className="text-gray-500">dedicated</span> Fullstack{" "}
-          <span className="text-gray-500"> Developer </span>
+          A <span className="text-gray-500">dedicated</span> Product
+          <span className="text-gray-500"> Engineer </span>
           based in <span className="text-gray-500">Semarang</span>, Central
           Java, Indonesia
         </motion.h1>
@@ -138,20 +138,10 @@ export default function About() {
           triggerAnime={triggerAnime}
         >
           <p className="md:text-base text-sm">
-            I’m a software developer focused on building reliable, scalable web
-            applications that create real impact. I care about designing
-            thoughtful systems, writing structured code, and turning ideas into
-            digital products that genuinely solve problems and improve how
-            people work.
+            I’m a Product Engineer based in Semarang, Indonesia, with experience turning real-world problems into practical digital products. I work across the development process, from understanding requirements and collaborating with stakeholders to designing systems, building features, and delivering reliable web applications. I’ve also worked with development teams to bring ideas into working solutions.
           </p>
           <p className="md:text-base text-sm mt-5">
-            I’m driven by strong fundamentals and continuous learning, always
-            refining how I think, design, and build. For me, good software is
-            not just about features, but about clarity, efficiency, and
-            delivering solutions that are meaningful and long-lasting. I value
-            problem-solving over complexity, and I aim to create systems that
-            are easy to maintain and adapt over time. This mindset helps me
-            approach every project with purpose and thoughtful execution.
+            I’m particularly interested in backend engineering, system design, and building software that solves meaningful problems. I believe good engineering goes beyond writing code. It requires understanding why a product exists, making thoughtful technical decisions, and creating solutions that are maintainable, adaptable, and useful to the people who rely on them.
           </p>
           <div className="mt-5">
             <a

@@ -22,7 +22,7 @@ export default function Hero() {
         </p>
         <div className="flex flex-col md:flex-row items-center gap-2 md:gap-0">
           <ShinyText
-            text="a Full-Stack Web Developer "
+            text="a Product Engineer"
             speed={3}
             className="text-2xl md:text-5xl"
           />
@@ -35,7 +35,7 @@ export default function Hero() {
           <span>
             <em-emoji native="💡" set="apple"></em-emoji>
           </span>{" "}
-          Into Powerful Web Experiences.
+          Into Digital Solutions.
         </p>
       </div>
     </div>
