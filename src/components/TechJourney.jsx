@@ -6,31 +6,39 @@ import undip from "../assets/undip.png";
 const experiences = [
   {
     id: 1,
-    role: "Community Developer",
-    company: "Enclavium FNF",
+    role: "Community Manager",
+    company: "Meteora IDN",
     logo: atom, // Using placeholder for now
-    date: "Jan 2026 - Present",
+    date: "May 2026 - Present",
     description:
-      "Contributing to a crypto DAO by building and improving responsive web interfaces using React and Tailwind CSS. Collaborating with cross-functional contributors to enhance usability and support community-driven development.",
+      "Managing and maintaining a Discord community of 10,000+ members, helping users navigate Meteora's ecosystem by answering questions, providing guidance, and sharing relevant information. Building community-focused tools to improve member experience and engagement, while fostering strong relationships with members and supporting a collaborative, welcoming environment.",
   },
   {
     id: 2,
-    role: "Fullstack Developer & IT Support Intern",
+    role: "Fullstack Developer Intern",
     company: "Direktorat Inovasi dan Kerja Sama, Universitas Diponegoro",
     logo: atom,
     date: "July 2025 - Dec 2025",
     description:
-      "Contributed to the development and maintenance of a logbook application, ensuring reliability and usability for daily operations. Worked on API integrations and provided technical support to support smooth deployment and ongoing improvements.",
+      "Contributed to the development and maintenance of a web application to manage the directorate's workflow, ensuring reliability and usability for daily operations. Worked on API integrations and provided technical support to support smooth deployment and ongoing improvements.",
   },
   {
     id: 3,
-    role: "Data Science & Web Development Intern",
+    role: "ML & Data Engineer Intern",
     company: "Central General Hospital Dr. Kariadi",
     logo: atom,
     date: "Jan 2025 - April 2025",
     description:
       "Developed a machine learning model to predict patient treatment costs from medical and demographic data to support hospital decision-making. Built a web application that enables staff to input patient data and receive real-time, usable cost predictions aligned with hospital needs.",
   },
+  {
+    id: 4,
+    role: "Team Lead ",
+    company: "Anforcom 2024",
+    logo: atom,
+    date: "May 2024 - Sept 2024",
+    description: "Led a team of three engineers in developing and maintaining ANFORCOM’s event platform, covering the landing page, participant registration system, and admin panel. Coordinated feature development, managed technical improvements, and oversaw platform maintenance and performance throughout the event, supporting more than 150 participants."
+  }
 ];
 
 const TechJourney = () => {
@@ -70,11 +78,11 @@ const TechJourney = () => {
                   <span className="text-gray-800 text-sm">at</span>
                 </div>
                 <div className="flex items-center gap-2">
-                   <span className="md:hidden text-gray-800 text-xs">at</span>
+                  <span className="md:hidden text-gray-800 text-xs">at</span>
                   <span className="font-bold text-sm md:text-lg">{exp.company}</span>
                 </div>
               </div>
-              <p className="text-xs md:text-sm text-gray-600 leading-relaxed max-w-2xl">
+              <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
                 {exp.description}
               </p>
             </div>
@@ -98,16 +106,16 @@ const TechJourney = () => {
             <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-2">
               <h3 className="text-md md:text-lg font-bold">Computer Science Degree</h3>
               <div className="flex items-center gap-2">
-                 <span className="text-gray-500 text-xs md:text-sm ">from</span>
-                 <img src={undip} alt={undip} className="w-5 h-5 md:w-6 md:h-6 object-contain" />
-                 <span className="font-bold text-sm md:text-lg">Diponegoro University</span>
+                <span className="text-gray-500 text-xs md:text-sm ">from</span>
+                <img src={undip} alt={undip} className="w-5 h-5 md:w-6 md:h-6 object-contain" />
+                <span className="font-bold text-sm md:text-lg">Diponegoro University</span>
               </div>
             </div>
-            <p className="text-xs md:text-sm text-black font-bold leading-relaxed max-w-xl mt-1 md:mt-0">
+            <p className="text-xs md:text-sm text-black font-bold leading-relaxed mt-1 md:mt-0">
               {" "}
               GPA : 3.80 / 4.00
             </p>
-            <p className="text-xs md:text-sm text-gray-600 leading-relaxed max-w-xl">
+            <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
               Graduated with honors. Focused on Software Engineering and
               scalable systems.
             </p>
@@ -141,20 +149,20 @@ const TechJourney = () => {
                 proposals.
               </li>
               <li>
-  <span className="font-bold text-gray-800">
-    Presenter & First Author — International Conference on Informatics and Computational Sciences (ICICoS) 2025:
-  </span>{" "}
-  Presented research and published a paper in IEEE Xplore as the first author.
-  {" "}
-  <a
-    href="https://ieeexplore.ieee.org/document/11330003/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-blue-600 font-semibold underline"
-  >
-    View publication
-  </a>
-</li>
+                <span className="font-bold text-gray-800">
+                  Presenter & First Author — International Conference on Informatics and Computational Sciences (ICICoS) 2025:
+                </span>{" "}
+                Presented research and published a paper in IEEE Xplore as the first author.
+                {" "}
+                <a
+                  href="https://ieeexplore.ieee.org/document/11330003/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 font-semibold underline"
+                >
+                  View publication
+                </a>
+              </li>
 
             </ul>
           </div>
