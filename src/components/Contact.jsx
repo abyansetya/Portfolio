@@ -144,7 +144,7 @@ export default function Contact() {
               <span className="inline sm:hidden"> above </span>
               <span className="font-bold">or</span> send an email to{" "}
               <span className="font-bold text-black">
-                abyansetyaa@gmail.com
+                hire@abyansetya.dev
               </span>{" "}
               and ~let's talk.
             </p>
