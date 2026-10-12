@@ -150,6 +150,12 @@ const TechJourney = () => {
               </li>
               <li>
                 <span className="font-bold text-gray-800">
+                  Staff Member — BEM FSM UNDIP 2024:
+                </span>{" "}
+                Contributed to student organization initiatives and collaborative programs, developing skills in teamwork, communication, and organizational coordination.
+              </li>
+              <li>
+                <span className="font-bold text-gray-800">
                   Presenter & First Author — International Conference on Informatics and Computational Sciences (ICICoS) 2025:
                 </span>{" "}
                 Presented research and published a paper in IEEE Xplore as the first author.
