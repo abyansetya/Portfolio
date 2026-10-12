@@ -1,5 +1,5 @@
 import React from "react";
-import aboutpict from "../assets/about.png";
+import aboutpict from "../assets/Entry_transparent.png";
 import html from "../assets/html.png";
 import css from "../assets/css-3.png";
 import js from "../assets/java-script.png";
@@ -72,7 +72,7 @@ export default function About() {
           rotateX,
           transformStyle: "preserve-3d",
         }}
-        className="sm:w-[350px] md:w-[400px] w-[250px] h-auto pr-5 self-center"
+        className="sm:w-[420px] md:w-[480px] w-[300px] h-auto pr-5 self-center"
         ref={ref}
         initial={{
           y: 100,

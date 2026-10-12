@@ -15,7 +15,7 @@ const skillsData = [
   },
   {
     category: "Backend",
-    items: "Node.js, Express JS, Laravel, GraphQL",
+    items: "Node.js, Express JS, Laravel",
   },
   {
     category: "Database & Cache",
@@ -27,7 +27,7 @@ const skillsData = [
   },
   {
     category: "Also Comfortable With",
-    items: "Python, C#, Git, Chrome Extension Development",
+    items: "Python, Git, Chrome Extension Development",
   },
 ];
 

@@ -24,7 +24,7 @@ const experiences = [
   },
   {
     id: 3,
-    role: "ML & Data Engineer Intern",
+    role: "Machine Learning Engineer",
     company: "Central General Hospital Dr. Kariadi",
     logo: atom,
     date: "Jan 2025 - April 2025",
@@ -113,7 +113,7 @@ const TechJourney = () => {
             </div>
             <p className="text-xs md:text-sm text-black font-bold leading-relaxed mt-1 md:mt-0">
               {" "}
-              GPA : 3.80 / 4.00
+              GPA : 3.81 / 4.00
             </p>
             <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
               Graduated with honors. Focused on Software Engineering and
