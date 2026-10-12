@@ -1,14 +1,20 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { ExternalLink } from "lucide-react";
 import atom from "../assets/atom.png"; // Placeholder for company logos
 import undip from "../assets/undip.png";
+import meteoraidn from "../assets/meteoraidn.jpg";
+import dirinovki from "../assets/dirinovki.jpg";
+import kariadi from "../assets/RSUP dr. kariadi.jpeg";
+import anforcom from "../assets/anforcom.jpg";
 
 const experiences = [
   {
     id: 1,
     role: "Community Manager",
     company: "Meteora IDN",
-    logo: atom, // Using placeholder for now
+    logo: meteoraidn,
+    url: "https://meteoraidn.com/",
     date: "July 2026 - Present",
     description:
       "Managing and maintaining a Discord community of 10,000+ members, helping users navigate Meteora's ecosystem by answering questions, providing guidance, and sharing relevant information. Building community-focused tools to improve member experience and engagement, while fostering strong relationships with members and supporting a collaborative, welcoming environment.",
@@ -17,28 +23,32 @@ const experiences = [
     id: 2,
     role: "Fullstack Developer Intern",
     company: "Direktorat Inovasi dan Kerja Sama, Universitas Diponegoro",
-    logo: atom,
+    logo: dirinovki,
+    url: "https://dirinovki.undip.ac.id/",
     date: "July 2025 - Dec 2025",
     description:
       "Contributed to the development and maintenance of a web application to manage the directorate's workflow, ensuring reliability and usability for daily operations. Worked on API integrations and provided technical support to support smooth deployment and ongoing improvements.",
   },
   {
     id: 3,
-    role: "Machine Learning Engineer",
-    company: "Central General Hospital Dr. Kariadi",
-    logo: atom,
+    role: "Machine Learning Engineer Intern",
+    company: "RSUP Dr. Kariadi",
+    logo: kariadi,
+    url: "https://rs-kariadi.go.id/",
     date: "Jan 2025 - April 2025",
     description:
       "Developed a machine learning model to predict patient treatment costs from medical and demographic data to support hospital decision-making. Built a web application that enables staff to input patient data and receive real-time, usable cost predictions aligned with hospital needs.",
   },
   {
     id: 4,
-    role: "Team Lead ",
+    role: "Team Lead",
     company: "Anforcom 2024",
-    logo: atom,
+    logo: anforcom,
+    url: "https://anforcom.com/",
     date: "May 2024 - Sept 2024",
-    description: "Led a team of three engineers in developing and maintaining ANFORCOM’s event platform, covering the landing page, participant registration system, and admin panel. Coordinated feature development, managed technical improvements, and oversaw platform maintenance and performance throughout the event, supporting more than 150 participants."
-  }
+    description:
+      "Led a team of three engineers in developing and maintaining ANFORCOM’s event platform, covering the landing page, participant registration system, and admin panel. Coordinated feature development, managed technical improvements, and oversaw platform maintenance and performance throughout the event, supporting more than 150 participants.",
+  },
 ];
 
 const TechJourney = () => {
@@ -79,7 +89,25 @@ const TechJourney = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="md:hidden text-gray-800 text-xs">at</span>
-                  <span className="font-bold text-sm md:text-lg">{exp.company}</span>
+                  <img
+                    src={exp.logo}
+                    alt={exp.company}
+                    className="w-5 h-5 md:w-6 md:h-6 object-contain"
+                  />
+                  <span className="font-bold text-sm md:text-lg">
+                    {exp.company}
+                  </span>
+                  {exp.url && (
+                    <a
+                      href={exp.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${exp.company} website`}
+                      className="text-gray-500 hover:text-black transition-colors"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5 md:w-4 md:h-4" />
+                    </a>
+                  )}
                 </div>
               </div>
               <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
@@ -104,11 +132,19 @@ const TechJourney = () => {
           </div>
           <div className="flex flex-col">
             <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-2">
-              <h3 className="text-md md:text-lg font-bold">Computer Science Degree</h3>
+              <h3 className="text-md md:text-lg font-bold">
+                Computer Science Degree
+              </h3>
               <div className="flex items-center gap-2">
                 <span className="text-gray-500 text-xs md:text-sm ">from</span>
-                <img src={undip} alt={undip} className="w-5 h-5 md:w-6 md:h-6 object-contain" />
-                <span className="font-bold text-sm md:text-lg">Diponegoro University</span>
+                <img
+                  src={undip}
+                  alt={undip}
+                  className="w-5 h-5 md:w-6 md:h-6 object-contain"
+                />
+                <span className="font-bold text-sm md:text-lg">
+                  Diponegoro University
+                </span>
               </div>
             </div>
             <p className="text-xs md:text-sm text-black font-bold leading-relaxed mt-1 md:mt-0">
@@ -152,14 +188,17 @@ const TechJourney = () => {
                 <span className="font-bold text-gray-800">
                   Staff Member — BEM FSM UNDIP 2024:
                 </span>{" "}
-                Contributed to student organization initiatives and collaborative programs, developing skills in teamwork, communication, and organizational coordination.
+                Contributed to student organization initiatives and
+                collaborative programs, developing skills in teamwork,
+                communication, and organizational coordination.
               </li>
               <li>
                 <span className="font-bold text-gray-800">
-                  Presenter & First Author — International Conference on Informatics and Computational Sciences (ICICoS) 2025:
+                  Presenter & First Author — International Conference on
+                  Informatics and Computational Sciences (ICICoS) 2025:
                 </span>{" "}
-                Presented research and published a paper in IEEE Xplore as the first author.
-                {" "}
+                Presented research and published a paper in IEEE Xplore as the
+                first author.{" "}
                 <a
                   href="https://ieeexplore.ieee.org/document/11330003/"
                   target="_blank"
@@ -169,7 +208,6 @@ const TechJourney = () => {
                   View publication
                 </a>
               </li>
-
             </ul>
           </div>
         </motion.div>
