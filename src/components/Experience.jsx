@@ -6,26 +6,29 @@ import styles from "../style";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const styles1 = {
-  header: "md:text-[24px] sm:text-[20px] text-[18px] font-bold",
-  paragraph: "sm:text-[13px] text-[11px] text-[#7d7d7d] ",
-};
-
 const images = [sertif1, sertif2, sertif3];
 
 const skillsData = [
-  { name: "Typescript", level: "Intermediate" },
-  { name: "Next JS", level: "Intermediate" },
-  { name: "Javascript", level: "Intermediate" },
-  { name: "mySQL", level: "Intermediate" },
-  { name: "React Router v7", level: "Intermediate" },
-  { name: "Express JS", level: "Intermediate" },
-  { name: "MongoDB", level: "Intermediate" },
-  { name: "React JS", level: "Intermediate" },
-  { name: "Tailwind CSS", level: "Intermediate" },
-  { name: "Laravel", level: "Intermediate" },
-  { name: "PostgreSQL", level: "Intermediate" },
-  { name: "Inertia JS", level: "Intermediate" },
+  {
+    category: "Frontend",
+    items: "React, Next.js, TypeScript, Tailwind CSS, React Router v7, Inertia JS",
+  },
+  {
+    category: "Backend",
+    items: "Node.js, Express JS, Laravel, GraphQL",
+  },
+  {
+    category: "Database & Cache",
+    items: "PostgreSQL, MySQL, MongoDB, Redis, BullMQ",
+  },
+  {
+    category: "Tools & DevOps",
+    items: "Docker, GitHub Actions, Vite",
+  },
+  {
+    category: "Also Comfortable With",
+    items: "Python, C#, Git, Chrome Extension Development",
+  },
 ];
 
 export default function Experience() {
@@ -75,29 +78,39 @@ export default function Experience() {
         <h1 className="font-poppins font-bold text-[32px]">Experiences</h1>
       </div>
       <div className="w-full  flex gap-2 mt-2 md:flex-row flex-col">
-        <div className="box1 md:w-[60%] w-[100%] rounded-md border-2 border-black">
-          <div className="title flex justify-center  flex-col items-center mt-2">
-            <h1 className="font-bold">Other Skills</h1>
-            <div className="w-[100px] border border-black h-[1px] mb-2" />
+        <div className="box1 md:w-[60%] w-[100%] rounded-md border-2 border-black flex flex-col">
+          <div className="title flex justify-center flex-col items-center mt-4">
+            <h1 className="font-poppins font-bold text-[20px]">
+              Tools I Reach For
+            </h1>
+            <div className="w-[160px] border border-black h-[1px] mt-2" />
           </div>
-          <div className="skills mt-4 px-4 flex items-center h-[80%]">
-            <div className="innerskills flex w-full justify-between  flex-wrap p-2">
-              {skillsData.map((skill, index) => (
-                <div
-                  key={index}
-                  className="sm:basis-4/12 flex flex-col items-center p-5"
-                >
-                  <h1 className={`${styles1.header}`}>{skill.name}</h1>
-                  <p className={`${styles1.paragraph}`}>{skill.level}</p>
+          <div className="skills flex-1 flex items-center px-6 py-6">
+            <div className="innerskills w-full border-t border-black pt-4">
+              {skillsData.map((group, index) => (
+                <div key={index} className="flex flex-col mb-5">
+                  <h2 className="font-bold text-[15px] md:text-[17px] tracking-wide">
+                    {group.category}
+                  </h2>
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {group.items.split(", ").map((item, i) => (
+                      <span
+                        key={i}
+                        className="border border-black rounded-full px-3 py-1 text-[12px] md:text-[13px] font-semibold bg-gray-50"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
-        <div className="box2 overflow-hidden md:w-[40%] w-[100%] rounded-md border-2 border-black   justify-center flex flex-col pb-5">
-          <div className="title flex justify-center flex-col items-center mt-2   ">
-            <h1 className="font-bold">Certificates</h1>
-            <div className="w-[120px] border border-black h-[1px] mb-2" />
+        <div className="box2 overflow-hidden md:w-[40%] w-[100%] rounded-md border-2 border-black justify-center flex flex-col pb-5">
+          <div className="title flex justify-center flex-col items-center mt-4">
+            <h1 className="font-poppins font-bold text-[20px]">Certificates</h1>
+            <div className="w-[160px] border border-black h-[1px] mt-2" />
           </div>
           <div className="carousel flex h-full flex-col items-center justify-center">
             <div className="innercarousel aspect-video relative pt-5 flex flex-col items-center">

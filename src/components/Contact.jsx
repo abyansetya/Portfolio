@@ -31,10 +31,22 @@ export default function Contact() {
 
   const form = useRef();
 
+  const EMAILJS_CONFIG = {
+    serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+    templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+    publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+  };
+
   //SEND EMAIL FUNCTION
   const sendEmail = async (e) => {
     e.preventDefault();
     setLoading(true);
+
+    // Honeypot: bots fill hidden fields — silently ignore
+    if (form.current.website?.value) {
+      setLoading(false);
+      return;
+    }
 
     // Wrap setTimeout in a Promise
     const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -44,10 +56,10 @@ export default function Contact() {
       await delay(2000);
 
       const result = await emailjs.sendForm(
-        "service_0xap5i6",
-        "template_cvdcrd4",
+        EMAILJS_CONFIG.serviceId,
+        EMAILJS_CONFIG.templateId,
         form.current,
-        "93GX9nNMQffy-jJlG"
+        EMAILJS_CONFIG.publicKey
       );
 
       console.log(result.text);
@@ -202,6 +214,17 @@ export default function Contact() {
         </div>
         <div className="box2 basis-[50%]">
           <form action="" className="flex flex-col" ref={form}>
+            <label htmlFor="website" className="hidden" aria-hidden="true">
+              Website
+            </label>
+            <input
+              type="text"
+              name="website"
+              className="hidden"
+              tabIndex="-1"
+              autoComplete="off"
+              aria-hidden="true"
+            />
             <label htmlFor="" className="w-full">
               Name
             </label>

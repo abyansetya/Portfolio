@@ -9,7 +9,7 @@ const experiences = [
     role: "Community Manager",
     company: "Meteora IDN",
     logo: atom, // Using placeholder for now
-    date: "May 2026 - Present",
+    date: "July 2026 - Present",
     description:
       "Managing and maintaining a Discord community of 10,000+ members, helping users navigate Meteora's ecosystem by answering questions, providing guidance, and sharing relevant information. Building community-focused tools to improve member experience and engagement, while fostering strong relationships with members and supporting a collaborative, welcoming environment.",
   },
