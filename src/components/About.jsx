@@ -12,7 +12,7 @@ import nextjs from "../assets/Next.js.png";
 import laravel from "../assets/laravel.png";
 import nodejs from "../assets/nodejs.png";
 import postgresql from "../assets/postgresql.png";
-import cv from "../assets/CV_AbyanSetyaneva_Updated.pdf";
+import cv from "../assets/CV_updated_october2026.pdf";
 export default function About() {
   const [triggerAnime, setTriggerAnime] = React.useState(false);
   const [ref, inView] = useInView({
@@ -146,7 +146,7 @@ export default function About() {
           <div className="mt-5">
             <a
               href={cv}
-              download="CV_AbyanSetyaneva.pdf"
+              download="CV_updated_october2026.pdf"
               className="inline-block bg-black text-white px-6 py-2 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-300"
             >
               Read More

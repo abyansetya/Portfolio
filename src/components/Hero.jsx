@@ -1,5 +1,5 @@
 import React from "react";
-import cv from "../assets/CV_AbyanSetyaneva_Updated.pdf";
+import cv from "../assets/CV_updated_october2026.pdf";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 import ShinyText from "@/lib/ShinyText";
