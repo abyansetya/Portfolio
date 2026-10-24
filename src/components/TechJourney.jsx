@@ -58,7 +58,7 @@ const TechJourney = () => {
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-2xl md:text-4xl font-bold mb-8 md:mb-12 tracking-tight"
+        className="text-[32px] font-bold mb-8 md:mb-12 tracking-tight"
       >
         My <span className="text-gray-500">Tech </span>Journey
       </motion.h2>
@@ -110,7 +110,7 @@ const TechJourney = () => {
                   )}
                 </div>
               </div>
-              <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+              <p className="text-[15px] text-gray-600 leading-relaxed">
                 {exp.description}
               </p>
             </div>
@@ -147,15 +147,15 @@ const TechJourney = () => {
                 </span>
               </div>
             </div>
-            <p className="text-xs md:text-sm text-black font-bold leading-relaxed mt-1 md:mt-0">
+            <p className="text-[15px] text-black font-bold leading-relaxed mt-1 md:mt-0">
               {" "}
               GPA : 3.81 / 4.00
             </p>
-            <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+            <p className="text-[15px] text-gray-600 leading-relaxed">
               Graduated with honors. Focused on Software Engineering and
               scalable systems.
             </p>
-            <ul className="list-disc list-outside ml-4 mt-2 text-xs md:text-sm text-gray-600 space-y-1">
+            <ul className="list-disc list-outside ml-4 mt-2 text-[15px] text-gray-600 space-y-1">
               <li>
                 <span className="font-bold text-gray-800">
                   Laboratory Teaching Assistant:

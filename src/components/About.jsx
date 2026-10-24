@@ -137,10 +137,10 @@ export default function About() {
           }}
           triggerAnime={triggerAnime}
         >
-          <p className="md:text-base text-sm">
+          <p className="text-[15px]">
             I’m a Product Engineer based in Semarang, Indonesia, with experience turning real-world problems into practical digital products. I work across the development process, from understanding requirements and collaborating with stakeholders to designing systems, building features, and delivering reliable web applications. I’ve also worked with development teams to bring ideas into working solutions.
           </p>
-          <p className="md:text-base text-sm mt-5">
+          <p className="text-[15px] mt-5">
             I’m particularly interested in backend engineering, system design, and building software that solves meaningful problems. I believe good engineering goes beyond writing code. It requires understanding why a product exists, making thoughtful technical decisions, and creating solutions that are maintainable, adaptable, and useful to the people who rely on them.
           </p>
           <div className="mt-5">
@@ -153,7 +153,7 @@ export default function About() {
             </a>
           </div>
           <div className="mt-8 flex items-center">
-            <h1 className="font-bold md:text-lg text-sm">Tech Stack</h1>
+            <h1 className="font-bold text-[20px]">Tech Stack</h1>
             <div className="h-[23px] border border-black ml-[10px] " />
             <div className="flex flex-wrap gap-5 ml-[10px]">
               <div className="relative group flex justify-center items-center">

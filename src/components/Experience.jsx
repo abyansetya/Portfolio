@@ -96,7 +96,7 @@ export default function Experience() {
                     {group.items.split(", ").map((item, i) => (
                       <span
                         key={i}
-                        className="border border-black rounded-full px-3 py-1 text-[12px] md:text-[13px] font-semibold bg-gray-50"
+                        className="border border-black rounded-full px-3 py-1 text-sm font-semibold bg-gray-50"
                       >
                         {item}
                       </span>

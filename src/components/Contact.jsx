@@ -144,7 +144,7 @@ export default function Contact() {
       <div className="box-container flex sm:flex-row flex-col-reverse py-5">
         <div className="box1 basis-[50%]">
           <div className="innerbox">
-            <h1 className="font-bold text-[#7d7d7d] text-[25px] mb-2 mt-5 sm:mt-0">
+            <h1 className="font-bold text-[#7d7d7d] text-[20px] mb-2 mt-5 sm:mt-0">
               Get in touch!
             </h1>
             <p className="text-[15px] max-w-[500px]">
@@ -161,7 +161,7 @@ export default function Contact() {
               and ~let's talk.
             </p>
             <div>
-              <h1 className="font-bold text-[25px] pt-4 text-[#7d7d7d]">
+              <h1 className="font-bold text-[20px] pt-4 text-[#7d7d7d]">
                 Let's Connect
               </h1>
               <div className="flex flex-col mt-2">

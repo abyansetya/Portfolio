@@ -104,7 +104,7 @@ const ProjectCard = ({ project }) => {
         <h1 className="justify-center flex font-bold text-center">
           {project.title}
         </h1>
-        <p className="mx-5 text-justify mt-2 sm:text-[16px] text-[15px]">
+        <p className="mx-5 text-justify mt-2 text-[15px]">
           {project.description}
         </p>
         <div className="mx-5 mt-3 flex flex-wrap gap-2 text-sm font-semibold text-gray-700">
