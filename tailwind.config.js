@@ -9,6 +9,7 @@ export default {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         line: ["LINESeedSans", "sans-serif"],
+        editorial: ["Playfair Display", "serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

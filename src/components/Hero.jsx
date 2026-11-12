@@ -22,9 +22,10 @@ export default function Hero() {
         </p>
         <div className="flex flex-col md:flex-row items-center gap-2 md:gap-0">
           <ShinyText
-            text="a Product Engineer"
+            text="a Software Engineer"
             speed={3}
             className="text-2xl md:text-5xl"
+            fontClassName="font-editorial italic"
           />
           <p className="text-2xl md:text-5xl">
             <em-emoji native="👨‍💻" set="apple"></em-emoji>

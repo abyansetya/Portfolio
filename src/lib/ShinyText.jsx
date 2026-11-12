@@ -3,15 +3,21 @@ import { init } from "emoji-mart";
 
 init({ data });
 
-const ShinyText = ({ text, disabled = false, speed = 5, className = "" }) => {
+const ShinyText = ({
+  text,
+  disabled = false,
+  speed = 5,
+  className = "",
+  fontClassName = "font-poppins",
+}) => {
   return (
     <span className={`relative inline-block ${className}`}>
       {/* layer dasar: abu-abu solid */}
-      <span className="text-black font-poppins">{text}</span>
+      <span className={`text-black ${fontClassName}`}>{text}</span>
 
       {/* overlay: hanya highlight putih bergerak */}
       <span
-        className={`absolute inset-0 bg-clip-text text-transparent bg-[length:200%_100%] ${
+        className={`absolute inset-0 bg-clip-text text-transparent bg-[length:200%_100%] ${fontClassName} ${
           disabled ? "" : "animate-shine"
         }`}
         style={{

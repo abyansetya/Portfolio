@@ -53,19 +53,19 @@ export default function App() {
                 </div>
               </section>
               <section
-                className={`${styles.paddingX} min-h-screen py-10 items-center flex`}
+                className={`${styles.paddingX} max-w-[1600px] mx-auto min-h-screen py-10 items-center flex`}
                 id="About"
               >
                 <About />
               </section>
               <section
-                className={`${styles.paddingX}  py-10 min-h-screen items-center flex`}
+                className={`${styles.paddingX} max-w-[1600px] mx-auto py-10 min-h-screen items-center flex`}
                 id="TechJourney"
               >
                 <TechJourney />
               </section>
               <section
-                className={`${styles.paddingX} pt-16 md:pt-6 h-[100%]`}
+                className={`${styles.paddingX} max-w-[1600px] mx-auto pt-16 md:pt-6 h-[100%]`}
                 id="Projects"
               >
                 <div>
@@ -73,7 +73,7 @@ export default function App() {
                 </div>
               </section>
               <section
-                className={`${styles.paddingX} sm:pb-16 pb-6 h-[100%]`}
+                className={`${styles.paddingX} max-w-[1600px] mx-auto sm:pb-16 pb-6 h-[100%]`}
                 id="Experiences"
               >
                 <div>
@@ -81,7 +81,7 @@ export default function App() {
                 </div>
               </section>
               <section
-                className={`${styles.paddingX}  sm:pt-16 pt-6  h-full`}
+                className={`${styles.paddingX} max-w-[1600px] mx-auto sm:pt-16 pt-6 h-full`}
                 id="Contact"
               >
                 <div>
